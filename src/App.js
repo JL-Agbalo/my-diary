@@ -1,48 +1,27 @@
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { useState } from 'react';
 function App() {
+const [num, setNum ] = useState(1);
+const [userName, setUserName] = useState('Code with Nard')
 
-  const firstName = 'Lenard';
-  const lastName = 'Agbalo';
-  const age = 23;
-  const students = {
-    firstName: 'Nard',
-    lastName: 'Abalo',
-    age: 20,
-  }
-
-  const studentsArr =
-  [ 
-    {
-      firstName: 'Nard',
-      lastName: 'Abalo',
-      age: 20,
-    },
-    {
-      firstName: 'Mark',
-      lastName: 'Espesa',
-      age: 11,
-    },
-    {
-      firstName: 'Lester',
-      lastName: 'Musafa',
-      age: 1,
-    },
-  ]
-
-
-  const arr = [1,2,3,4,5]
   return (
   <div>
   <Header/>
   <main>
-    <h1>Hello {firstName} {lastName} {age}</h1>
-    <h1>Hello {students.firstName} {students.lastName} {students.age}</h1>
-    {arr.map((num => <p> {num * 5} </p>))}
+    <h1>{num}</h1>
+    {/* <button onClick={() => setNum(num + 1)}>Add 1</button> */}
+    <button onClick={() => setNum(currentNumber => currentNumber + 1)}>Add 1</button>
+    <h1>{userName}</h1>
+    {/* <button onClick={() => setUserName(currentUserName => "Code with Lenard")}>Change</button> */}
 
-    {studentsArr.map((students => <p> {students.firstName} {students.lastName}</p>))}
-
+    {/* <h1>{userName}</h1> */}
+    <input
+        name="userName"
+        value={userName}
+        onChange={(e) => setUserName(e.target.value)}
+      />
   </main>
   <Footer/>
 
