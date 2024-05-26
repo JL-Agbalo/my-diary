@@ -19,3 +19,8 @@ Javascript Object
 
 
 CSS Stylesheet
+
+Props Used to pass the data from one component to another
+
+Destructure = function Form({myDiary, handleChange }) {
+Not Destructured function Form({props }) {
