@@ -1,8 +1,12 @@
-import React from 'react'
 
 const Header = () => {
+  const home = "Home"
+  const aboutUs = "About Us"
   return (
-    <div>Header</div>
+    <div>
+      <p>{home}</p>
+      <p>{aboutUs}</p>
+    </div>
   )
 }
 
