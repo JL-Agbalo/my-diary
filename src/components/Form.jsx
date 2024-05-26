@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import ListItemText from '@mui/material/ListItemText';
 function Form({myDiary, handleChange }) {
+
+useEffect(() => {
+    console.log("Mount")
+    return () => {
+        console.log('Unmount')
+    }
+}, [])
+
   return (
     <div style={{ justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
         <h1>My Diary</h1>
